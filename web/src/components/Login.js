@@ -52,10 +52,16 @@ const BgImage = styled.div`
     z-index: -1;
 `; 
 
-const CTA = styled.div``;
+const CTA = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+`;
 
 const Logo = styled.img`
-    width: 768px;
+    width: 70%;
+    max-width: 768px;
     transition: all 500ms ease-in-out;
     z-index: 1;
     &:hover {
@@ -64,6 +70,8 @@ const Logo = styled.img`
 `;
 
 const SearchBox = styled.div`
+    width: 70%;
+    max-width: 768px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,14 +90,20 @@ const SearchBox = styled.div`
 const SearchLabel = styled.h3`
     width: 100%;
     font-size: 36px;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 28px;
+    }
 `;
 
 const SearchBar = styled.input`
-    width: 456px;
+    width: 80%;
+    max-width: 456px;
     height: 3.5em;
     border-radius: 15px;
     margin-bottom: 50px;
     font-size: 1.2em;
+    padding-left: 20px; 
 `;
 
 export default Login;
